@@ -124,6 +124,14 @@ var p = {
     lastName: 'Wayne'
 };
 fullName(p);
-/* FUNCTIONS - END */
-/* INTERFACES IN TYPESCRIPT - START */
-/* INTERFACES IN TYPESCRIPT - END */ 
+function displayFullName(person) {
+    console.log("".concat(person.firstName, " ").concat(person.lastName));
+}
+var pp = {
+    firstName: 'Bruce',
+    lastName: 'Wayne'
+};
+displayFullName(pp);
+/* INTERFACES IN TYPESCRIPT - END */
+/* CLASSES && ACCESS MODIFIERS - START */
+/* CLASSES && ACCESS MODIFIERS - END */ 

@@ -167,12 +167,42 @@ fullName(p)
 
 /* INTERFACES IN TYPESCRIPT - START */
 
+// In TypeScript, an interface is an abstract type that tells the compiler which property names a given object can have.
+// Imagine having function with soo many parameters
+// Like: firstName, lastName, address etc etc
+// Giving soo many parameters will make code look more clumsy
+// It will be hard to fing bug
+// The Solution for this is, We have INTERFACES in TypeScript
+// You Can see now the code looks much more cleaner
 
+// We can also add optional parameters by adding '?' to the interface property
+// You cannot add default values to interface
+// But you can make it as optional by adding '?' to the interface
 
-
-
-
-
-
+interface Person {
+    firstName: String,
+    lastName?: String
+}
+function displayFullName(person: Person) {
+    console.log(`${person.firstName} ${person.lastName}`)
+}
+let pp = {
+    firstName: 'Bruce',
+    lastName: 'Wayne'
+};
+displayFullName(pp)
 
 /* INTERFACES IN TYPESCRIPT - END */
+
+
+
+/* CLASSES && ACCESS MODIFIERS - START */
+
+
+
+
+
+
+
+
+/* CLASSES && ACCESS MODIFIERS - END */
