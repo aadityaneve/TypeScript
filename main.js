@@ -90,4 +90,30 @@ multiType = 20;
 multiType = true;
 /* VARIABLE TYPES - END */
 /* FUNCTIONS - START */
+// Function Syntax
+/* function function_name(parameter: data_type): return data_type {
+    return something
+} */
+function add(num1, num2) {
+    return num1 + num2;
+}
+add(5, 10);
+// Optional params in typescript
+function addd(num1, num2) {
+    if (num2)
+        return num1 + num2;
+    else
+        return num1;
+}
+addd(5);
+// Default params in typescript
+function adddd(num1, num2) {
+    if (num2 === void 0) { num2 = 10; }
+    if (num2)
+        return num1 + num2;
+    else
+        return num1;
+}
+adddd(5, 10);
+adddd(5);
 /* FUNCTIONS - END */ 
