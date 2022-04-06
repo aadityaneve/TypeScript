@@ -1,48 +1,31 @@
-export { }
-
+"use strict";
+exports.__esModule = true;
 console.clear();
-
-let message = 'Welcome Back ..!!';
+var message = 'Welcome Back ..!!';
 // console.log("🚀 ~ file: main.ts ~ line 2 ~ message", message)
-
-
 /* VARIABLE TYPES - START */
-let x = 10
-const y = 20
-
-let sum;
-const title = 'NEVE';
-
-let isBeginner: boolean = true;
-let total: number = 0;
-let name: String = 'Aditya';
-
-
-let sentence: String = `
-My name is ${name}
-${title}.
-I am Learning TypeScript.
-`
+var x = 10;
+var y = 20;
+var sum;
+var title = 'NEVE';
+var isBeginner = true;
+var total = 0;
+var name = 'Aditya';
+var sentence = "\nMy name is ".concat(name, "\n").concat(title, ".\nI am Learning TypeScript.\n");
 // console.log("🚀 ~ file: main.ts ~ line 16 ~ sentence", sentence)
-
-name.charAt(3)
-total.toFixed(5)
-
+name.charAt(3);
+total.toFixed(5);
 // Not much use
-let n: null = null;
-let u: undefined = undefined;
-
+var n = null;
+var u = undefined;
 // But can use like this
-let isNew: boolean = null;
-let myName: String = undefined;
-
-
+var isNew = null;
+var myName = undefined;
 // We give type of an array like this
 // Both syntax is valid
 // You can use anyone you like
-let list1: number[] = [1, 2, 3]
-let list2: Array<number> = [1, 3, 3]
-
+var list1 = [1, 2, 3];
+var list2 = [1, 3, 3];
 // You may need an array for mixed type
 // Mixed array of touple type
 // Number of elements in array is fixed here
@@ -50,74 +33,61 @@ let list2: Array<number> = [1, 3, 3]
 // And order of value has to match order of the types
 // We cannot add extra values other than the given types
 // Syntax is like this
-let person1: [String, number] = ['Aditya', 3];
-
-
-
+var person1 = ['Aditya', 3];
 // enum type => friendly name to a set of numeric values
 // we use enum keyword
-enum Color { Red = 5, Green, Blue };
-let c: Color = Color.Green;
-console.log("🚀 ~ file: main.ts ~ line 59 ~ c", c)
-
-
+var Color;
+(function (Color) {
+    Color[Color["Red"] = 5] = "Red";
+    Color[Color["Green"] = 6] = "Green";
+    Color[Color["Blue"] = 7] = "Blue";
+})(Color || (Color = {}));
+;
+var c = Color.Green;
+console.log("🚀 ~ file: main.ts ~ line 59 ~ c", c);
 // random value of type any
 // compiler will not throw any error
-let randomValue: any = 10;
+var randomValue = 10;
 randomValue = true;
 randomValue = 'Vishwas';
-
 // As myVariable is of type any it will not throw any error
 // if you call myVariable as a function call still it will not throw any error
 // if you myVariable.toUpperCase() still it will throw any error
 // if you write myVariable.name stil it will not give any error
-let myVariable: any = 10;
+var myVariable = 10;
 // myVariable()
 // myVariable.toUpperCase()
 // console.log(myVariable.name)
-console.log("🚀 ~ file: main.ts ~ line 70 ~ myVariable", myVariable)
-
-
+console.log("🚀 ~ file: main.ts ~ line 70 ~ myVariable", myVariable);
 // Type unknown
 // TypeScript assumes that we have made a necessary check
 // This is called as Type Assertion ( in other languages it is called as type casting )
 // Here myVar is treated as a string, and after that toUpperCase method is applied
-
-function hasName(obj: any): obj is { name: String } {
+function hasName(obj) {
     return !!obj &&
         typeof obj === 'object' &&
-        'name' in obj
+        'name' in obj;
 }
-
 if (hasName(myVariable)) {
-    console.log(myVariable.name)
+    console.log(myVariable.name);
 }
-
-let newVar: unknown = 10;
+var newVar = 10;
 // (newVar as String).toUpperCase();
-
-
-
 // Type Inference
 // TypeScript can infer the data type of a variable as we assign values to them.
-let a;
+var a;
 a = 10;
 a = true;
-
-let b = 20;
-
+var b = 20;
 // Union Type
 // In TypeScript, a union type variable is a variable which can store multiple type of values
 // ( i.e number, String etc )
 // MultiType
 // In MultiType we can assign multiple types
 // Use pipe
-let multiType: number | boolean;
+var multiType;
 multiType = 20;
 multiType = true;
-
 /* VARIABLE TYPES - END */
-
-
 /* FUNCTIONS - START */
-/* FUNCTIONS - END */
+/* FUNCTIONS - END */ 
