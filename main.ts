@@ -239,3 +239,29 @@ console.log(manager.employeeName);
 
 /* CLASSES- END */
 
+
+/* ACCESS MODIFIERS - START */
+
+
+// By default each class members are public
+// So, we can freely access them in the program
+
+class Teacher {
+    public teacherName: String; // Free accessibility
+    private phoneNumber: number; // Accessibility only within the class
+    protected age: number; // Accessibility within the class and the classes derived from it
+
+    constructor(name: String) {
+        this.teacherName = name;
+    }
+
+    greet() {
+        console.log(`Good Morning: ${this.teacherName}`);
+    }
+}
+
+let teacher = new Teacher('Tori');
+teacher.greet()
+
+
+/* ACCESS MODIFIERS - END */

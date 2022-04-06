@@ -181,3 +181,18 @@ manager.delegateWork();
 manager.greet();
 console.log(manager.employeeName);
 /* CLASSES- END */
+/* ACCESS MODIFIERS - START */
+// By default each class members are public
+// So, we can freely access them in the program
+var Teacher = /** @class */ (function () {
+    function Teacher(name) {
+        this.teacherName = name;
+    }
+    Teacher.prototype.greet = function () {
+        console.log("Good Morning: ".concat(this.teacherName));
+    };
+    return Teacher;
+}());
+var teacher = new Teacher('Tori');
+teacher.greet();
+/* ACCESS MODIFIERS - END */ 
