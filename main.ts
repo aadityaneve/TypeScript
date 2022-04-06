@@ -196,13 +196,46 @@ displayFullName(pp)
 
 
 
-/* CLASSES && ACCESS MODIFIERS - START */
+/* CLASSES - START */
 
 
+// Creating a class
+class Employee {
+    employeeName: String;
+
+    constructor(name: String) {
+        this.employeeName = name;
+    }
+
+    greet() {
+        console.log(`Good Morning: ${this.employeeName}`);
+    }
+}
+
+let emp1 = new Employee('Jack');
+emp1.greet()
 
 
+// Creating calss Manager
+// Because of classes, now its possible to have class base inheritance
+// A manager is just an employee with just some extra privileges
+// So instead of repeating the properties of an employee in manager class
+// We can simply inherit them
+
+class Manager extends Employee {
+    constructor(managerName: String) {
+        super(managerName);
+    }
+
+    delegateWork() {
+        console.log(`Manager delegating tasks.`);
+    }
+}
+let manager = new Manager('Stark');
+manager.delegateWork()
+manager.greet()
+console.log(manager.employeeName);
 
 
+/* CLASSES- END */
 
-
-/* CLASSES && ACCESS MODIFIERS - END */

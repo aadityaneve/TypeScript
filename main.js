@@ -1,4 +1,19 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 exports.__esModule = true;
 console.clear();
 var message = 'Welcome Back ..!!';
@@ -133,5 +148,36 @@ var pp = {
 };
 displayFullName(pp);
 /* INTERFACES IN TYPESCRIPT - END */
-/* CLASSES && ACCESS MODIFIERS - START */
-/* CLASSES && ACCESS MODIFIERS - END */ 
+/* CLASSES - START */
+// Creating a class
+var Employee = /** @class */ (function () {
+    function Employee(name) {
+        this.employeeName = name;
+    }
+    Employee.prototype.greet = function () {
+        console.log("Good Morning: ".concat(this.employeeName));
+    };
+    return Employee;
+}());
+var emp1 = new Employee('Jack');
+emp1.greet();
+// Creating calss Manager
+// Because of classes, now its possible to have class base inheritance
+// A manager is just an employee with just some extra privileges
+// So instead of repeating the properties of an employee in manager class
+// We can simply inherit them
+var Manager = /** @class */ (function (_super) {
+    __extends(Manager, _super);
+    function Manager(managerName) {
+        return _super.call(this, managerName) || this;
+    }
+    Manager.prototype.delegateWork = function () {
+        console.log("Manager delegating tasks.");
+    };
+    return Manager;
+}(Employee));
+var manager = new Manager('Stark');
+manager.delegateWork();
+manager.greet();
+console.log(manager.employeeName);
+/* CLASSES- END */
