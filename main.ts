@@ -148,4 +148,31 @@ adddd(5, 10)
 adddd(5)
 
 
+function fullName(person: { firstName: String, lastName: String }) {
+    console.log(`${person.firstName} ${person.lastName}`)
+}
+
+let p = {
+    firstName: 'Bruce',
+    lastName: 'Wayne'
+};
+
+fullName(p)
+
+
 /* FUNCTIONS - END */
+
+
+
+
+/* INTERFACES IN TYPESCRIPT - START */
+
+
+
+
+
+
+
+
+
+/* INTERFACES IN TYPESCRIPT - END */

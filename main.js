@@ -116,4 +116,14 @@ function adddd(num1, num2) {
 }
 adddd(5, 10);
 adddd(5);
-/* FUNCTIONS - END */ 
+function fullName(person) {
+    console.log("".concat(person.firstName, " ").concat(person.lastName));
+}
+var p = {
+    firstName: 'Bruce',
+    lastName: 'Wayne'
+};
+fullName(p);
+/* FUNCTIONS - END */
+/* INTERFACES IN TYPESCRIPT - START */
+/* INTERFACES IN TYPESCRIPT - END */ 
