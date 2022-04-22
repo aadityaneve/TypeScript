@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# It will do a type-check
+yarn tsc
+
+# Tying husky && lint-staged
+yarn lint-staged
