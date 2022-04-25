@@ -139,14 +139,20 @@ var p = {
     lastName: 'Wayne'
 };
 fullName(p);
+var person = {
+    firstName: "ABC",
+    lastName: "XYZ"
+};
 function displayFullName(person) {
+    console.log("🚀 ~ file: main.ts ~ line 193 ~ displayFullName ~ person", person);
     console.log("".concat(person.firstName, " ").concat(person.lastName));
 }
-var pp = {
-    firstName: 'Bruce',
-    lastName: 'Wayne'
-};
-displayFullName(pp);
+// let pp = {
+//     firstName: 'Bruce',
+//     // lastName: 'Wayne'
+// };
+person.firstName = 'Hello';
+displayFullName(person);
 /* INTERFACES IN TYPESCRIPT - END */
 /* CLASSES - START */
 // Creating a class

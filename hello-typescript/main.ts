@@ -183,14 +183,22 @@ interface Person {
     firstName: String,
     lastName?: String
 }
+let person: Person = {
+    firstName: "ABC",
+    lastName: "XYZ"
+}
+
 function displayFullName(person: Person) {
+    console.log("🚀 ~ file: main.ts ~ line 193 ~ displayFullName ~ person", person)
     console.log(`${person.firstName} ${person.lastName}`)
 }
-let pp = {
-    firstName: 'Bruce',
-    lastName: 'Wayne'
-};
-displayFullName(pp)
+// let pp = {
+//     firstName: 'Bruce',
+//     // lastName: 'Wayne'
+// };
+
+person.firstName = 'Hello'
+displayFullName(person)
 
 /* INTERFACES IN TYPESCRIPT - END */
 
