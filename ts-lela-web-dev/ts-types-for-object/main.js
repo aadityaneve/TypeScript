@@ -40,7 +40,8 @@ var ROLES;
 (function (ROLES) {
     ROLES[ROLES["ADMIN"] = 0] = "ADMIN";
     ROLES[ROLES["AUTHOR"] = 1] = "AUTHOR";
-    ROLES[ROLES["GUEST"] = 2] = "GUEST";
+    ROLES["GUEST"] = "GUEST";
+    ROLES[ROLES["UNKNOWN"] = 99] = "UNKNOWN";
 })(ROLES || (ROLES = {}));
 var person2 = {
     name: 'Leela',
@@ -51,3 +52,16 @@ var person2 = {
 if (person2.role === ROLES.ADMIN) {
     console.log('User is Admin');
 }
+// Any
+/* let arr: any[]
+arr.push('adfdsfa')
+arr.push(2) */
+// Union
+function combine(num1, num2) {
+    if (typeof num1 === 'number' && typeof num2 === 'number')
+        return num1 + num2;
+    else
+        return num1.toString() + num2.toString();
+}
+var ans1 = combine(1, 'Aditya');
+console.log(ans1);
