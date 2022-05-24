@@ -1,3 +1,4 @@
+"use strict";
 /* let person: {
     name: string,
     age: number
@@ -7,23 +8,22 @@
 }
 
 console.log(person.name) */
-var person = {
+let person = {
     name: 'Leela',
     age: 99,
-    hobbies: ['sports', 'cooking']
+    hobbies: ['sports', 'cooking'],
 };
-var favorites1;
+let favorites1;
 favorites1 = ['animals', 1];
-var favorites2;
+let favorites2;
 favorites2 = ['animals'];
-var favorites3;
+let favorites3;
 favorites3 = [{ name: 'adsfs' }];
-for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
-    var hobby = _a[_i];
+for (let hobby of person.hobbies) {
     console.log(hobby.toUpperCase());
 }
 // Tuple
-var person1 = {
+let person1 = {
     name: 'Leela',
     age: 99,
     hobbies: ['sports', 'cooking'],
@@ -31,8 +31,8 @@ var person1 = {
 };
 person1.role.push('admin');
 console.log(person1);
-var employee = [5, 'asdfds'];
-var emp;
+let employee = [5, 'asdfds'];
+let emp;
 emp = [22, 'adsfasd'];
 console.log(emp);
 // ENUMS
@@ -43,7 +43,7 @@ var ROLES;
     ROLES["GUEST"] = "GUEST";
     ROLES[ROLES["UNKNOWN"] = 99] = "UNKNOWN";
 })(ROLES || (ROLES = {}));
-var person2 = {
+let person2 = {
     name: 'Leela',
     age: 333,
     hobbies: ['sports', 'cooking'],
@@ -67,7 +67,7 @@ function combine(num1, num2) {
     else
         return num1.toString() + num2.toString();
 }
-var ans1 = combine(1, 'Aditya');
+let ans1 = combine(1, 'Aditya');
 console.log(ans1);
 // Literal Type
 var RESULT_TYPES;
@@ -76,7 +76,7 @@ var RESULT_TYPES;
     RESULT_TYPES["AS_TEXT"] = "as-text";
 })(RESULT_TYPES || (RESULT_TYPES = {}));
 function combine2(num1, num2, resultType) {
-    var result;
+    let result;
     if (typeof num1 === 'number' && typeof num2 === 'number')
         result = num1 + num2;
     else
@@ -101,14 +101,15 @@ console.log(printResult(add3(9, 9)));
 // Assign functions as Types to a variable with argument types
 //  and return types in Typescript
 // let combineValues: Function
-var combineValues;
+let combineValues;
 combineValues = add3;
 console.log(combineValues(1, 9));
 // Unknown type and Never type in ts
-var userInput;
-var userName;
+let userInput;
+let userName;
 userInput = 'Leela';
 function generateError(message, code) {
     // throw { message, code }
 }
 generateError('Invalid Page', 500);
+//# sourceMappingURL=main.js.map
