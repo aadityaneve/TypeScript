@@ -16,6 +16,8 @@ Enums => only in typescript
 
 any => only in typescript
 
+Union Type => Typescript
+
 
  */
 
