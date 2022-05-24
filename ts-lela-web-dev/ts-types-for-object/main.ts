@@ -165,7 +165,7 @@ userInput = 'Leela'
 
 
 function generateError(message: string, code: number): void {
-    throw { message, code }
+    // throw { message, code }
 }
 
 generateError('Invalid Page', 500)

@@ -109,6 +109,6 @@ var userInput;
 var userName;
 userInput = 'Leela';
 function generateError(message, code) {
-    throw { message: message, code: code };
+    // throw { message, code }
 }
 generateError('Invalid Page', 500);
