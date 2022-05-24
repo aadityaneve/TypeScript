@@ -10,6 +10,8 @@ Object => javascript and typescript
 
 Arrays => javascript and typescript
 
+touple => javascript and typescript
+
 
  */
 
