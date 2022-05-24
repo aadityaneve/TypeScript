@@ -134,3 +134,17 @@ function combine2(num1: number | string | boolean, num2: number | string, result
 
 console.log(combine2(1, 2, 'as-number'))
 console.log(combine2(1, 2, 'as-text'))
+
+
+
+// Function return value types and void in Typescript
+// Difference between Void and Undefined type
+function add3(num1: number, num2: number): number {
+    return num1 + num2
+}
+
+function printResult(value: number): void {
+    console.log('Result', value)
+}
+printResult(add3(9, 9))
+console.log(printResult(add3(9, 9)))

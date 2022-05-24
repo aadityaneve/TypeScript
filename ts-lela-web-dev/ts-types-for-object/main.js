@@ -88,3 +88,13 @@ function combine2(num1, num2, resultType) {
 }
 console.log(combine2(1, 2, 'as-number'));
 console.log(combine2(1, 2, 'as-text'));
+// Function return value types and void in Typescript
+// Difference between Void and Undefined type
+function add3(num1, num2) {
+    return num1 + num2;
+}
+function printResult(value) {
+    console.log('Result', value);
+}
+printResult(add3(9, 9));
+console.log(printResult(add3(9, 9)));
