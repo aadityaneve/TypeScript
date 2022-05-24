@@ -4,7 +4,11 @@
 
 string => javascript and typescript => 'HI', 'Hi', `hi`
 
-Boolean => 
+Boolean => javascript and typescript 
+
+Object => javascript and typescript
+
+Arrays => javascript and typescript
 
 
  */
