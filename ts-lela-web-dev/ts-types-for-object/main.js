@@ -57,6 +57,10 @@ if (person2.role === ROLES.ADMIN) {
 arr.push('adfdsfa')
 arr.push(2) */
 // Union
+// In ts, a union type variable is a variable which can store multiple type of
+//  i.e ( number, string, etc). A union type allows us to define a variable
+//  with multiple types. The union type vairables are defined using the pipe ( | )
+//  symbol between the types. The union types help in some special situations
 function combine(num1, num2) {
     if (typeof num1 === 'number' && typeof num2 === 'number')
         return num1 + num2;
@@ -65,3 +69,22 @@ function combine(num1, num2) {
 }
 var ans1 = combine(1, 'Aditya');
 console.log(ans1);
+// Literal Type
+var RESULT_TYPES;
+(function (RESULT_TYPES) {
+    RESULT_TYPES["AS_NUMBER"] = "as-number";
+    RESULT_TYPES["AS_TEXT"] = "as-text";
+})(RESULT_TYPES || (RESULT_TYPES = {}));
+function combine2(num1, num2, resultType) {
+    var result;
+    if (typeof num1 === 'number' && typeof num2 === 'number')
+        result = num1 + num2;
+    else
+        result = num1.toString() + num2.toString();
+    if (resultType === RESULT_TYPES.AS_NUMBER)
+        return +result;
+    else
+        return result.toString();
+}
+console.log(combine2(1, 2, 'as-number'));
+console.log(combine2(1, 2, 'as-text'));

@@ -114,3 +114,23 @@ function combine(num1: number | string | boolean, num2: number | string) {
 
 let ans1 = combine(1, 'Aditya');
 console.log(ans1)
+
+
+// Literal Type
+
+enum RESULT_TYPES {
+    AS_NUMBER = 'as-number',
+    AS_TEXT = 'as-text'
+}
+
+function combine2(num1: number | string | boolean, num2: number | string, resultType: 'as-number' | 'as-text') {
+    let result;
+    if (typeof num1 === 'number' && typeof num2 === 'number') result = num1 + num2
+    else result = num1.toString() + num2.toString()
+
+    if (resultType === RESULT_TYPES.AS_NUMBER) return +result
+    else return result.toString()
+}
+
+console.log(combine2(1, 2, 'as-number'))
+console.log(combine2(1, 2, 'as-text'))
