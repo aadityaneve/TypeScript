@@ -103,4 +103,5 @@
   "exclude": ["node_modules"],
   // "include": ["js/main.ts"], // will only include main.ts for compilation
   "include": ["js/*"], // will compile all files inside js dir
+  "files": [], // Mention all files to compile, specifically you can include
 }
