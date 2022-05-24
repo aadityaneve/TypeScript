@@ -29,6 +29,7 @@ for (let hobby of person.hobbies) {
     console.log(hobby.toUpperCase())
 }
 
+// Tuple
 
 let person1: {
     name: string,
@@ -65,3 +66,27 @@ type Obj = {
 let emp: Emp
 emp = [22, 'adsfasd']
 console.log(emp)
+
+
+
+
+
+// ENUMS
+
+enum ROLES {
+    ADMIN,
+    AUTHOR,
+    GUEST = 'GUEST',
+    UNKNOWN = 99
+}
+
+let person2 = {
+    name: 'Leela',
+    age: 333,
+    hobbies: ['sports', 'cooking'],
+    role: ROLES.ADMIN
+}
+
+if(person2.role === ROLES.ADMIN) {
+    console.log('User is Admin')
+}
