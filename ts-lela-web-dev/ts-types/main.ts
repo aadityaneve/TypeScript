@@ -18,6 +18,8 @@ any => only in typescript
 
 Union Type => Typescript
 
+Literal Type => Typescript
+
 
  */
 
