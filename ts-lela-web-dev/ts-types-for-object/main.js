@@ -104,3 +104,11 @@ console.log(printResult(add3(9, 9)));
 var combineValues;
 combineValues = add3;
 console.log(combineValues(1, 9));
+// Unknown type and Never type in ts
+var userInput;
+var userName;
+userInput = 'Leela';
+function generateError(message, code) {
+    throw { message: message, code: code };
+}
+generateError('Invalid Page', 500);

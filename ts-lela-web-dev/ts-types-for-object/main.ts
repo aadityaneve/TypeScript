@@ -156,3 +156,16 @@ console.log(printResult(add3(9, 9)))
 let combineValues: (a: number, b: number) => number
 combineValues = add3
 console.log(combineValues(1, 9))
+
+
+// Unknown type and Never type in ts
+let userInput: unknown
+let userName: string
+userInput = 'Leela'
+
+
+function generateError(message: string, code: number): void {
+    throw { message, code }
+}
+
+generateError('Invalid Page', 500)
