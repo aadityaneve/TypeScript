@@ -38,3 +38,15 @@ console.log(str)
 let bool: boolean;
 bool = false;
 console.log(bool)
+
+
+
+
+
+
+
+// Any
+
+let array: any[]
+array.push('adfdsfa')
+array.push(2)
