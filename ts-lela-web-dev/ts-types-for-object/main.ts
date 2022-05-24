@@ -148,3 +148,11 @@ function printResult(value: number): void {
 }
 printResult(add3(9, 9))
 console.log(printResult(add3(9, 9)))
+
+
+// Assign functions as Types to a variable with argument types
+//  and return types in Typescript
+// let combineValues: Function
+let combineValues: (a: number, b: number) => number
+combineValues = add3
+console.log(combineValues(1, 9))
