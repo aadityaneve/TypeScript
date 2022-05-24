@@ -90,3 +90,11 @@ let person2 = {
 if(person2.role === ROLES.ADMIN) {
     console.log('User is Admin')
 }
+
+
+
+// Any
+
+let arr: any[]
+arr.push('adfdsfa')
+arr.push(2)
